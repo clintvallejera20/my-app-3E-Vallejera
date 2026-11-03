@@ -5,10 +5,10 @@ You build your assigned system in this repo; the PM reviews and releases it.
 
 | Branch | Goes live at | Who controls it |
 |---|---|---|
-| `dev` | **Staging**: `https://SUBDOMAIN-dev.aws-deployhost.online` | You. Push anytime; it updates automatically within ~10 minutes. |
-| `main` | **Production**: `https://SUBDOMAIN.aws-deployhost.online` | The PM. Changes arrive by pull request and go live when the PM releases them. |
+| `dev` | **Staging**: `https://3e-vallejera-dev.aws-deployhost.online` | You. Push anytime; it updates automatically within ~10 minutes. |
+| `main` | **Production**: `https://3e-vallejera.aws-deployhost.online` | The PM. Changes arrive by pull request and go live when the PM releases them. |
 
-Your SUBDOMAIN, project status and deploy history: **https://aws-deployhost.online**
+Your 3e-vallejera, project status and deploy history: **https://aws-deployhost.online**
 Your deploy log and PHP errors: the **private log link** your instructor sends you (don't share it).
 
 ---
@@ -30,14 +30,14 @@ database.sql         your tables + sample data
    - Windows: `C:\xampp\htdocs\`
    - Mac: `/Applications/XAMPP/xamppfiles/htdocs/`
    ```bash
-   git clone https://github.com/mit-adrian/YOUR-REPO.git
-   cd YOUR-REPO
+   git clone https://github.com/mit-adrian/it304-3e-vallejera-clint-john.git
+   cd it304-3e-vallejera-clint-john
    git checkout dev
    ```
 2. Start **Apache** and **MySQL** in XAMPP.
 3. In **phpMyAdmin** (http://localhost/phpmyadmin): create a database named `it304_local`, then **Import** `database.sql`.
 4. Copy `api/config.local.example.php` to `api/config.local.php`. Edit it only if your MySQL password isn't empty.
-5. Check the API: open `http://localhost/YOUR-REPO/api/health.php`. You should see `"db":"ok"`.
+5. Check the API: open `http://localhost/it304-3e-vallejera-clint-john/api/health.php`. You should see `"db":"ok"`.
 6. Run the frontend:
    ```bash
    cd frontend
