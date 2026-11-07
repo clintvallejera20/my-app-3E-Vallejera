@@ -60,7 +60,9 @@ Read **PROJECT.md** fully: the problem, the modules, the rules and how you'll be
 
 ### 4. Create README.md
 
-In VS Code, create a new file named exactly **README.md** in the main folder (next to PROJECT.md).
+In VS Code, create a new file named exactly **README.md** in the top folder of the repository, next to PROJECT.md
+(not inside `api` or `frontend`). On `dev` there is no README.md yet: you're making it.
+If you already see a README.md, you're still on the `main` branch: run `git checkout dev` first.
 Paste this and fill in every part **in your own words**:
 
 ```
@@ -137,6 +139,7 @@ You should see your README, and your commit with **your** username. If it's on `
 | `error: pathspec 'dev' did not match` | Run `git fetch`, then `git checkout dev` again. |
 | `Author identity unknown` | Do step 1, then commit again. |
 | `nothing to commit` | README.md isn't saved, or it's in the wrong folder. Save it next to PROJECT.md, then `git add` and commit again. |
+| A README.md is already there before you create one | You're on `main`. Run `git checkout dev`; it disappears, then create yours. |
 | `rejected ... main` or `protected branch` | You're on `main`. Run `git checkout dev`, then push. |
 | `rejected ... fetch first` | Run `git pull`, then `git push` again. |
 | Your commit shows a name with no profile picture | Your Git email isn't your GitHub email. Fix step 1; your next commit will show correctly. |
