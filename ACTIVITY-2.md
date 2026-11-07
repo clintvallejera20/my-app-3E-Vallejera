@@ -22,7 +22,7 @@ Copy this repository to your laptop, create **README.md** with your system's req
 GitHub on the `dev` branch. This is the loop you'll repeat until your system is done:
 **clone once, then edit → commit → push to `dev`**.
 
-You need **Git** and **VS Code** on your laptop, and my invitation to this repo **accepted**.
+You need **Git**, **VS Code** and **XAMPP** on your laptop, and my invitation to this repo **accepted**.
 
 ## Steps
 
@@ -39,15 +39,18 @@ Use the **same email as your GitHub account**, so your commits show under your u
 
 ### 2. Clone this repository and switch to dev
 
-Go to a folder where you keep projects, then run (use your own repository name, shown at the top of this page):
+Clone it into XAMPP's **htdocs** folder, so you can keep working on it there for your project.
+Go to htdocs first, then run (use your own repository name, shown at the top of this page):
 
 ```
+cd C:\xampp\htdocs
 git clone https://github.com/mit-adrian/it304-3a-delacruz-juan.git
 cd it304-3a-delacruz-juan
 git checkout dev
 git pull
 ```
 
+On a Mac, the first line is `cd /Applications/XAMPP/xamppfiles/htdocs` instead.
 When Git asks you to sign in, use **your** GitHub account, the one I invited.
 
 ### 3. Open it and read PROJECT.md
@@ -136,6 +139,7 @@ You should see your README, and your commit with **your** username. If it's on `
 | You see | Do this |
 | --- | --- |
 | `Repository not found` or `403` when cloning | Accept the invitation first. If you did, Git is signed in to another GitHub account: sign out (Windows: Credential Manager → remove github.com) and clone again. |
+| `Cannot find path 'C:\xampp\htdocs'` | XAMPP isn't installed, or it's in another folder. Install XAMPP, or `cd` to the htdocs folder where your XAMPP is. |
 | `error: pathspec 'dev' did not match` | Run `git fetch`, then `git checkout dev` again. |
 | `Author identity unknown` | Do step 1, then commit again. |
 | `nothing to commit` | README.md isn't saved, or it's in the wrong folder. Save it next to PROJECT.md, then `git add` and commit again. |
